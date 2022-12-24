@@ -1,0 +1,9 @@
+[user]
+	email = douglasfrb@gmail.com
+	name = Douglas Brandão
+
+[core]
+    editor = vim
+
+[init]
+    defaultBranch = main
