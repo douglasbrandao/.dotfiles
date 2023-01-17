@@ -1,0 +1,6 @@
+require "douglas.options"
+require "douglas.keymaps"
+require "douglas.plugins"
+require "douglas.colorscheme"
+require "douglas.cmp"
+require "douglas.treesitter"
