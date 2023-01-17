@@ -7,7 +7,7 @@ echo "Installing neovim"
 sudo apt install ./neovim.deb
 
 echo "Creating symlinks"
-ln -sfn /home/$USER/.dotfiles/git/.gitconfig ~/.
-ln -sfn /home/$USER/.dotfiles/zsh/.zshrc ~/.
-ln -sfn /home/$USER/.dotfiles/vim/.vimrc ~/.
-ln -sfn /home/$USER/.dotfiles/nvim/ ~/.config
+ln -sfn $HOME/.dotfiles/git/.gitconfig ~/.
+ln -sfn $HOME/.dotfiles/zsh/.zshrc ~/.
+ln -sfn $HOME/.dotfiles/vim/.vimrc ~/.
+ln -sfn $HOME/.dotfiles/nvim/ ~/.config
