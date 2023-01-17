@@ -40,7 +40,8 @@ return packer.startup(function(use)
 
   -- Finder plugins
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    'nvim-telescope/telescope.nvim', 
+    tag = '0.1.0', 
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
