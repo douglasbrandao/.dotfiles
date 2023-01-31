@@ -1,7 +1,7 @@
 v = vim.opt
 
 -- clipboard
-v.clipboard = "unnamedplus"
+-- v.clipboard = "unnamedplus"
 
 -- case
 v.hlsearch = true
