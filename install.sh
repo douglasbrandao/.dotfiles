@@ -1,13 +1,15 @@
 #!/bin/bash
 
-echo "Downloading neovim..."
-wget -O ./neovim.deb https://github.com/neovim/neovim/releases/download/v0.8.2/nvim-linux64.deb
+file=$(head -n 1 /etc/lsb-release)
 
-echo "Installing neovim"
-sudo apt install ./neovim.deb
+IFS='='
 
-echo "Creating symlinks"
-ln -sfn $HOME/.dotfiles/git/.gitconfig ~/.
-ln -sfn $HOME/.dotfiles/zsh/.zshrc ~/.
-ln -sfn $HOME/.dotfiles/vim/.vimrc ~/.
-ln -sfn $HOME/.dotfiles/nvim/ ~/.config
+read -a strarr <<< "$file"
+
+distro_name=${strarr[1]}
+
+if [[ $distro_name == "Ubuntu" ]]; then
+  source "$(dirname $0)/install-ubuntu.sh"
+elif [[ $distro_name == "Arch" ]]; then
+  echo "in progress"
+fi
