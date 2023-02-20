@@ -68,6 +68,13 @@ return packer.startup(function(use)
     run = ':TSUpdate'
   }
 
+  -- LSP
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  }
+
   -- Nvim tree
   use {
     'nvim-tree/nvim-tree.lua',
