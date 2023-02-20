@@ -56,6 +56,9 @@ return packer.startup(function(use)
   use 'saadparwaiz1/cmp_luasnip'
   use 'onsails/lspkind.nvim'
 
+  -- Git
+  use 'f-person/git-blame.nvim'
+
   -- Snippets
   use 'L3MON4D3/LuaSnip'
 
@@ -72,6 +75,12 @@ return packer.startup(function(use)
     'nvim-tree/nvim-web-devicons',
   },
     tag = 'nightly'
+  }
+
+  -- Lua line
+  use {
+  'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
   if packer_bootstrap then
