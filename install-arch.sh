@@ -16,3 +16,8 @@ echo starship init fish | source >> ~/.config/fish/config.fish
 
 echo "Installing neovim..."
 sudo pacman -S neovim
+
+echo "Creating symlinks"
+ln -sfn $HOME/.dotfiles/git/.gitconfig ~/.
+ln -sfn $HOME/.dotfiles/nvim/ ~/.config
+ln -sfn $HOME/.dotfiles/starship.toml ~/.config
