@@ -26,7 +26,7 @@ end
 
 packer.init {
   display = {
-    open_fn = function() 
+    open_fn = function()
       return require("packer.util").float { border = "rounded" }
     end,
   },
@@ -40,8 +40,8 @@ return packer.startup(function(use)
 
   -- Finder plugins
   use {
-    'nvim-telescope/telescope.nvim', 
-    tag = '0.1.0', 
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.0',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
@@ -88,6 +88,12 @@ return packer.startup(function(use)
   use {
   'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+
+  -- Auto pairs
+  use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
   }
 
   if packer_bootstrap then

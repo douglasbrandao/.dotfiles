@@ -20,7 +20,15 @@ mason_lsp_config.setup({
 })
 
 
-lsp_config.lua_ls.setup {}
+lsp_config.lua_ls.setup {
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { 'vim' }
+      }
+    }
+  }
+}
 
 lsp_config.pylsp.setup {}
 
