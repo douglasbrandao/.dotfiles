@@ -3,7 +3,15 @@
 	name = Douglas Brandão
 
 [core]
-    editor = vim
+  editor = vim
 
 [init]
-    defaultBranch = main
+  defaultBranch = main
+
+[alias]
+  a = add
+  br = branch
+  co = checkout
+  cm = commit -m
+  rs = reset --soft HEAD~1
+  rh = reset --hard HEAD~1
