@@ -33,3 +33,9 @@ zinit light zsh-users/zsh-completions
 
 # Enable starship
 eval "$(starship init zsh)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/douglas/google-cloud-sdk/path.zsh.inc' ]; then . '/home/douglas/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/douglas/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/douglas/google-cloud-sdk/completion.zsh.inc'; fi

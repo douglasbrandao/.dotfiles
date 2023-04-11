@@ -15,3 +15,5 @@
   cm = commit -m
   rs = reset --soft HEAD~1
   rh = reset --hard HEAD~1
+  ps = push
+  psup = git push --set-upstream origin HEAD
