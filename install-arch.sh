@@ -3,15 +3,15 @@
 echo "Updating and upgrading local package index..."
 pacman -Syu
 
-echo "Downloading git..."
-pacman -S git
+#echo "Downloading git..."
+#pacman -S git
 
 echo "Installing fish and setting it as default shell..."
-pacman -S fish 
+sudo pacman -S fish 
 sudo chsh -s /usr/bin/fish
 
 echo "Installing starship..."
-pacman -S starship
+sudo pacman -S starship
 echo starship init fish | source >> ~/.config/fish/config.fish
 
 echo "Installing neovim..."
