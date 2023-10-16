@@ -25,4 +25,4 @@ echo "Creating symlinks"
 ln -sfn $HOME/.dotfiles/git/.gitconfig ~/.
 ln -sfn $HOME/.dotfiles/zsh/.zshrc ~/.
 ln -sfn $HOME/.dotfiles/vim/.vimrc ~/.
-ln -sfn $HOME/.dotfiles/config ~/.config
+ln -sfn $HOME/.dotfiles/config/* ~/.config
