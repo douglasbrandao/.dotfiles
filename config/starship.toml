@@ -31,6 +31,10 @@ symbol = " "
 
 [git_branch]
 symbol = " "
+format='[git:\(](blue bold)[$branch(:$remote_branch)](red bold)[\)](blue bold) '
+
+[git_status]
+style='bold yellow'
 
 [golang]
 symbol = " "
@@ -58,6 +62,7 @@ symbol = " "
 
 [nodejs]
 symbol = " "
+format = 'via [🤖 $version](bold green) '
 
 [package]
 symbol = " "
