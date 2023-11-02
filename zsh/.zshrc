@@ -1,11 +1,15 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 
-#ZSH_THEME="agnoster"
+#ZSH_THEME="robbyrussell"
 
 plugins=(
     git
     virtualenv
+    copyfile # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/copyfile
+    docker
+    extract # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/extract
+    gitignore # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/gitignore
 )
 
 source $ZSH/oh-my-zsh.sh
