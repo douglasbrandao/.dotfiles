@@ -2,79 +2,15 @@ scan_timeout = 10
 command_timeout = 10000
 add_newline = true
 
-[aws]
-symbol = "  "
-
-[buf]
-symbol = " "
-
-[c]
-symbol = " "
-
-[conda]
-symbol = " "
-
-[dart]
-symbol = " "
-
-[directory]
-read_only = " "
-
-[docker_context]
-symbol = " "
-
-[elixir]
-symbol = " "
-
-[elm]
-symbol = " "
-
 [git_branch]
-symbol = " "
 format='[git:\(](blue bold)[$branch(:$remote_branch)](red bold)[\)](blue bold) '
 
 [git_status]
 style='bold yellow'
 
-[golang]
-symbol = " "
-
-[haskell]
-symbol = " "
-
-[hg_branch]
-symbol = " "
-
-[java]
-symbol = " "
-
-[julia]
-symbol = " "
-
-[memory_usage]
-symbol = " "
-
-[nim]
-symbol = " "
-
-[nix_shell]
-symbol = " "
-
 [nodejs]
-symbol = " "
-format = 'via [🤖 $version](bold green) '
-
-[package]
-symbol = " "
-
-[python]
-symbol = " "
-
-[spack]
-symbol = "🅢 "
-
-[rust]
-symbol = " "
+symbol = "🤖"
+format = 'via [$symbol $version](bold green) '
 
 [username]
 style_user = "blue bold"
