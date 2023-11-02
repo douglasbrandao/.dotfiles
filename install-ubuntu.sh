@@ -3,17 +3,25 @@
 echo "Updating and upgrading local package index..."
 sudo apt update && sudo upgrade -y
 
-#echo "Downloading git..."
-#sudo apt install git
+echo "Downloading git..."
+sudo apt install git
 
-echo "Installing fish and setting it as default shell..."
-sudo apt-add-repository ppa:fish-shell/release-3
+#echo "Installing fish and setting it as default shell..."
+#sudo apt-add-repository ppa:fish-shell/release-3
+#sudo apt update
+#sudo apt install fish
+#sudo chsh -s $(which fish)
+
+echo "Installing zsh and setting it as default shell..."
 sudo apt update
-sudo apt install fish
-sudo chsh -s $(which fish)
+sudo apt install zsh
+sudo chsh -s $(which zsh)
 
-echo "Installing starship..."
-echo starship init fish | source >> ~/.config/fish/config.fish
+#echo "Installing starship on fish..."
+curl -sS https://starship.rs/install.sh | sh
+
+echo "Installing starship"
+curl -sS https://starship.rs/install.sh | sh
 
 echo "Downloading neovim..."
 wget -O ./neovim.deb https://github.com/neovim/neovim/releases/download/v0.8.2/nvim-linux64.deb
