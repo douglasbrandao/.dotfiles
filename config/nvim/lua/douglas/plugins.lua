@@ -19,8 +19,8 @@ vim.cmd([[
   augroup end
 ]])
 
-local is_status_ok, packer = pcall(require, "packer")
-if not is_status_ok then
+local packer_status, packer = pcall(require, "packer")
+if not packer_status then
   return
 end
 

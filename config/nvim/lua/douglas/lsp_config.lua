@@ -1,15 +1,15 @@
-local is_mason_status_ok, mason = pcall(require, "mason")
-if not is_mason_status_ok then
+local mason_status, mason = pcall(require, "mason")
+if not mason_status then
   return
 end
 
-local is_mason_lsp_config_status_ok, mason_lsp_config = pcall(require, "mason-lspconfig")
-if not is_mason_lsp_config_status_ok then
+local mason_lsp_config_status, mason_lsp_config = pcall(require, "mason-lspconfig")
+if not mason_lsp_config_status then
   return
 end
 
-local is_lsp_config_status_ok, lsp_config = pcall(require, "lspconfig")
-if not is_lsp_config_status_ok then
+local lsp_config_status, lsp_config = pcall(require, "lspconfig")
+if not lsp_config_status then
   return
 end
 

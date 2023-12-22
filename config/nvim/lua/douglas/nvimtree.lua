@@ -2,8 +2,8 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
-local is_status_ok, nvim_tree = pcall(require, "nvim-tree")
-if not is_status_ok then
+local nvim_tree_status, nvim_tree = pcall(require, "nvim-tree")
+if not nvim_tree_status then
   return
 end
 
