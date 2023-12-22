@@ -34,6 +34,7 @@ packer.init {
 
 return packer.startup(function(use)
   -- Plugins
+  use 'wbthomason/packer.nvim'
 
   -- Finder plugins
   use {
