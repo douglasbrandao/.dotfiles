@@ -16,7 +16,7 @@ end
 mason.setup()
 
 mason_lsp_config.setup({
-  ensure_installed = { "lua_ls", "tsserver" }
+  ensure_installed = { "lua_ls", "tsserver", "pylsp" }
 })
 
 
@@ -31,4 +31,6 @@ lsp_config.lua_ls.setup {
 }
 
 lsp_config.tsserver.setup {}
+
+lsp_config.pylsp.setup {}
 
