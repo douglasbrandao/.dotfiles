@@ -74,6 +74,9 @@ return packer.startup(function(use)
     "neovim/nvim-lspconfig",
   }
 
+  -- Linter
+  use 'mfussenegger/nvim-lint'
+
   -- Nvim tree
   use {
     'nvim-tree/nvim-tree.lua',
