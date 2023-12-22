@@ -68,6 +68,12 @@ return packer.startup(function(use)
     run = ':TSUpdate'
   }
 
+  -- Statusline
+  use {
+  'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
+
   -- LSP
   use {
     "williamboman/mason.nvim",
