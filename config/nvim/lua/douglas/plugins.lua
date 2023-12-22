@@ -45,6 +45,7 @@ return packer.startup(function(use)
 
   -- Colorschemes
   use 'folke/tokyonight.nvim'
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   -- CMP plugins
   use 'hrsh7th/nvim-cmp'
