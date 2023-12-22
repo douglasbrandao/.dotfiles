@@ -34,9 +34,6 @@ packer.init {
 
 return packer.startup(function(use)
   -- Plugins
-  use 'wbthomason/packer.nvim'
-  use 'nvim-lua/popup.nvim'
-  use 'nvim-lua/plenary.nvim'
 
   -- Finder plugins
   use {
@@ -53,14 +50,15 @@ return packer.startup(function(use)
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-cmdline'
-  use 'saadparwaiz1/cmp_luasnip'
-  use 'onsails/lspkind.nvim'
+  use 'hrsh7th/cmp-nvim-lsp'
 
   -- Git
   use 'f-person/git-blame.nvim'
 
   -- Snippets
   use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'rafamadriz/friendly-snippets'
 
   -- Highlight syntax
   use {
@@ -82,12 +80,6 @@ return packer.startup(function(use)
     'nvim-tree/nvim-web-devicons',
   },
     tag = 'nightly'
-  }
-
-  -- Lua line
-  use {
-  'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
   -- Auto pairs
