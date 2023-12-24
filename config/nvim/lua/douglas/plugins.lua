@@ -96,6 +96,15 @@ return packer.startup(function(use)
     tag = 'nightly'
   }
 
+  -- Nvim greeter
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'nvim-tree/nvim-web-devicons' },
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.startify'.config)
+    end
+  }
+
   -- Auto pairs
   use {
 	"windwp/nvim-autopairs",
