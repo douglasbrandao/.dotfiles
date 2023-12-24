@@ -43,6 +43,9 @@ return packer.startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  -- Icons
+  use 'nvim-tree/nvim-web-devicons'
+
   -- Colorschemes
   use 'folke/tokyonight.nvim'
   use { "catppuccin/nvim", as = "catppuccin" }
