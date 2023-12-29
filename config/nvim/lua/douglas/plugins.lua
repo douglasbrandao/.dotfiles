@@ -91,13 +91,6 @@ return packer.startup(function(use)
       "rcarriga/nvim-notify",
     }
   }
-
-  -- Trouble
-  use {
-    "folke/trouble.nvim",
-    requires = { "nvim-tree/nvim-web-devicons" }
-  }
-
   -- Linter
   use 'mfussenegger/nvim-lint'
 

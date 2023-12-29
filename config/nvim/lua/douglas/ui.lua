@@ -16,12 +16,3 @@ notify.setup({
   background_colour = "#000000"
 })
 
-local trouble_status, trouble = pcall(require, "trouble")
-
-if not trouble_status then
-  return
-end
-
-trouble.setup({
-  use_diagnostic_signs = true
-})
