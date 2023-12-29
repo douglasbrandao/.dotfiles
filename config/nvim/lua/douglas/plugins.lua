@@ -84,16 +84,18 @@ return packer.startup(function(use)
     "neovim/nvim-lspconfig",
   }
 
-  -- Noice 
-  use "MunifTanjim/nui.nvim"
-  use "rcarriga/nvim-notify"
-
   use {
     "folke/noice.nvim",
-    dependencies = {
-    "MunifTanjim/nui.nvim",
-    "rcarriga/nvim-notify",
+    requires = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
     }
+  }
+
+  -- Trouble
+  use {
+    "folke/trouble.nvim",
+    requires = { "nvim-tree/nvim-web-devicons" }
   }
 
   -- Linter
@@ -102,10 +104,8 @@ return packer.startup(function(use)
   -- Nvim tree
   use {
     'nvim-tree/nvim-tree.lua',
-  requires = {
-    'nvim-tree/nvim-web-devicons',
-  },
-    tag = 'nightly'
+    requires = {'nvim-tree/nvim-web-devicons'},
+    tag = 'nightly',
   }
 
   -- Nvim greeter
