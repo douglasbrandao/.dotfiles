@@ -84,6 +84,18 @@ return packer.startup(function(use)
     "neovim/nvim-lspconfig",
   }
 
+  -- Noice 
+  use "MunifTanjim/nui.nvim"
+  use "rcarriga/nvim-notify"
+
+  use {
+    "folke/noice.nvim",
+    dependencies = {
+    "MunifTanjim/nui.nvim",
+    "rcarriga/nvim-notify",
+    }
+  }
+
   -- Linter
   use 'mfussenegger/nvim-lint'
 
