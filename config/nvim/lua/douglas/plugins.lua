@@ -61,9 +61,13 @@ return packer.startup(function(use)
   use 'f-person/git-blame.nvim'
 
   -- Snippets
-  use 'L3MON4D3/LuaSnip'
-  use 'saadparwaiz1/cmp_luasnip'
-  use 'rafamadriz/friendly-snippets'
+  use {
+    'L3MON4D3/LuaSnip',
+    requires = {
+      'saadparwaiz1/cmp_luasnip',
+      'rafamadriz/friendly-snippets'
+    }
+  }
 
   -- Highlight syntax
   use {
@@ -112,7 +116,7 @@ return packer.startup(function(use)
 
   -- Auto pairs
   use {
-	"windwp/nvim-autopairs",
+	  "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
   }
 

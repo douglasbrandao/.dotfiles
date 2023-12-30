@@ -1,4 +1,4 @@
-v = vim.opt
+local v = vim.opt
 
 -- clipboard
 -- v.clipboard = "unnamedplus"
