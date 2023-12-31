@@ -95,6 +95,11 @@ return packer.startup(function(use)
       "rcarriga/nvim-notify",
     }
   }
+
+  -- Formatting
+  use {
+    "stevearc/conform.nvim"
+  }
   -- Linter
   use 'mfussenegger/nvim-lint'
 
