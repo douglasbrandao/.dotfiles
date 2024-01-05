@@ -10,14 +10,14 @@ end
 -- vim.g.mapleader = " "
 
 -- window navigation
-keymap("n", "<C-O>b", "<C-W>s", { silent = true }) -- horizontal splitting 
+keymap("n", "<C-O>b", "<C-W>s", { silent = true }) -- horizontal splitting
 keymap("n", "<C-O>r", "<C-W>v", { silent = true }) -- vertical splitting
-keymap("n", "<C-K>", "<C-W>k", { silent = true }) -- move to the top window
-keymap("n", "<C-J>", "<C-W>j", { silent = true }) -- move to the bottom window
-keymap("n", "<C-H>", "<C-W>h", { silent = true }) -- move to the left window
-keymap("n", "<C-L>", "<C-W>l", { silent = true }) -- move to the right window
-keymap("n", "qq", "<C-W>q", { silent = true }) -- close the current window
-keymap("n", "ca", "<C-W>o", { silent = true }) -- close all windows
+keymap("n", "<C-K>", "<C-W>k", { silent = true })  -- move to the top window
+keymap("n", "<C-J>", "<C-W>j", { silent = true })  -- move to the bottom window
+keymap("n", "<C-H>", "<C-W>h", { silent = true })  -- move to the left window
+keymap("n", "<C-L>", "<C-W>l", { silent = true })  -- move to the right window
+keymap("n", "qq", "<C-W>q", { silent = true })     -- close the current window
+keymap("n", "ca", "<C-W>o", { silent = true })     -- close all windows
 
 -- window resizing
 keymap("n", "<C-Up>", ":resize -2<CR>", { silent = true })
@@ -38,3 +38,12 @@ vim.keymap.set('n', '<C-B>', builtin.buffers, {})
 
 -- nvimtree
 keymap("n", "<A-e>", ":NvimTreeToggle<CR>", { silent = true })
+
+-- harpoon
+vim.keymap.set('n', 'ha', require('harpoon.mark').add_file)
+vim.keymap.set('n', 'hr', require('harpoon.mark').rm_file)
+vim.keymap.set('n', 'hc', require('harpoon.mark').clear_all)
+vim.keymap.set('n', 'hn', require('harpoon.ui').nav_next)
+vim.keymap.set('n', 'hp', require('harpoon.ui').nav_prev)
+
+keymap("n", [[hm]], ":Telescope harpoon marks<CR>")
