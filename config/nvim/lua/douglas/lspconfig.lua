@@ -34,4 +34,3 @@ lsp_config.lua_ls.setup {
 lsp_config.tsserver.setup {}
 
 lsp_config.pylsp.setup {}
-
