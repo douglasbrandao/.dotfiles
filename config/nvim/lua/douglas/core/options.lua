@@ -25,5 +25,3 @@ v.confirm = true
 v.wrap = false
 
 v.termguicolors = true
-
-
