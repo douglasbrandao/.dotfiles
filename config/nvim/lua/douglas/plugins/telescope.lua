@@ -5,7 +5,6 @@ return {
   branch = '0.1.x',
   dependencies = {
     'ThePrimeagen/harpoon',
-    'nvim-lua/plenary.nvim',
   },
   config = function()
     local telescope = require('telescope')

@@ -1,10 +1,9 @@
 return {
   'nvim-lualine/lualine.nvim',
   dependencies = {
-    'nvim-tree/nvim-web-devicons',
-    "folke/noice.nvim",
-    "MunifTanjim/nui.nvim",
-    "rcarriga/nvim-notify",
+    'folke/noice.nvim',
+    'MunifTanjim/nui.nvim',
+    'rcarriga/nvim-notify',
     'f-person/git-blame.nvim',
   },
   config = function()
@@ -12,6 +11,8 @@ return {
     local notify = require('notify')
     local lualine = require('lualine')
     local gitblame = require('gitblame')
+
+    noice.setup({})
 
     notify.setup({
       background_colour = "#000000"
