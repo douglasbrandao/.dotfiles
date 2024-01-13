@@ -1,8 +1,5 @@
-vim.opt.completeopt = "menu,menuone,noselect"
-
 return {
   'hrsh7th/nvim-cmp',
-  event = "InsertEnter",
   dependencies = {
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-buffer',
@@ -12,10 +9,17 @@ return {
     'saadparwaiz1/cmp_luasnip',
     'rafamadriz/friendly-snippets'
   },
+  event = "InsertEnter",
   config = function()
     local cmp = require('cmp')
     local luasnip = require('luasnip')
+
+    require("luasnip/loaders/from_vscode").lazy_load()
+
     cmp.setup({
+      completion = {
+        completeopt = "menu,menuone,preview,noselect",
+      },
       snippet = {
         expand = function(args)
           luasnip.lsp_expand(args.body) -- For `luasnip` users.
@@ -35,13 +39,13 @@ return {
         ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
       }),
       sources = cmp.config.sources({
-        { name = 'nvim_lsp' },                                       -- LSP
-        { name = 'luasnip', option = { show_autosnippets = true } }, -- For luasnip users.
-        { name = 'buffer' },                                         -- text within the current buffer
-        { name = 'path' },                                           -- file system path
-      })
+          { name = 'nvim_lsp' }, -- LSP
+          { name = 'luasnip', option = { show_autosnippets = true } },
+        },
+        {
+          { name = 'buffer' }, -- text within the current buffer
+          { name = 'path' },   -- file system path
+        })
     })
-
-    require("luasnip/loaders/from_vscode").lazy_load()
   end
 }
