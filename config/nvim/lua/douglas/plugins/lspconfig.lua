@@ -26,7 +26,8 @@ return {
       settings = {
         Lua = {
           diagnostics = {
-            globals = { 'vim' }
+            globals = { 'vim' },
+            disable = { "missing-parameters", "missing-fields" },
           },
           completion = {
             callSnippet = "Replace",
