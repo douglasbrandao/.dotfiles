@@ -22,7 +22,7 @@ return {
     })
 
     -- lspconfigs
-    lspconfig["lua_ls"].setup({
+    lspconfig.lua_ls.setup({
       settings = {
         Lua = {
           diagnostics = {
@@ -35,8 +35,8 @@ return {
       }
     })
 
-    lspconfig["tsserver"].setup({})
-    lspconfig["pylsp"].setup({})
-    lspconfig["vimls"].setup({})
+    lspconfig.tsserver.setup({})
+    lspconfig.pylsp.setup({})
+    lspconfig.vimls.setup({})
   end
 }
