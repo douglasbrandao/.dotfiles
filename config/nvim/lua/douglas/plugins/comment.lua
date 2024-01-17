@@ -3,8 +3,6 @@
 return {
   'numToStr/Comment.nvim',
   event = { "BufReadPre", "BufNewFile" },
-  opts = {
-
-  },
+  opts = {},
   lazy = false,
 }

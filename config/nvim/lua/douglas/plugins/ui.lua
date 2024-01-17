@@ -25,24 +25,40 @@ return {
         notification = "%T",
         notification_history = "%FT%T"
       },
-      timeout = 500,
+      timeout = 2500,
       top_down = true
     })
 
     lualine.setup({
       sections = {
+        lualine_x = {
+          {
+            noice.api.status.message.get_hl,
+            cond = noice.api.status.message.has,
+          },
+          {
+            noice.api.status.command.get,
+            cond = noice.api.status.command.has,
+            color = { fg = "#ff9e64" },
+          },
+          {
+            noice.api.status.mode.get,
+            cond = noice.api.status.mode.has,
+            color = { fg = "#ff9e64" },
+          },
+          {
+            noice.api.status.search.get,
+            cond = noice.api.status.search.has,
+            color = { fg = "#ff9e64" },
+          },
+        },
         lualine_c = {
           { gitblame.get_current_blame_text, cond = gitblame.is_blame_text_available }
         },
-        lualine_x = {
-          {
-            noice.api.statusline.mode.get,
-            cond = noice.api.statusline.mode.has,
-            color = { fg = "ff9e64" },
-          }
-        }
       }
     })
+
+    print(lualine.get_config())
 
     -- gitblame config
     vim.g.gitblame_message_when_not_committed = 'This line hasn\'t been committed yet'

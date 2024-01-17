@@ -15,8 +15,11 @@ return {
     })
 
     local nvimtree = require('nvim-tree')
+
     nvimtree.setup({
-      sort_by = "case_sensitive",
+      sort = {
+        sorter = "case_sensitive",
+      },
       sync_root_with_cwd = true,
       view = {
         adaptive_size = true,
@@ -26,7 +29,7 @@ return {
         group_empty = true,
       },
       filters = {
-        dotfiles = true,
+        dotfiles = false,
       },
       git = {
         enable = true,
@@ -37,7 +40,7 @@ return {
       },
       update_focused_file = {
         enable = true,
-        update_cwd = true,
+        update_root = true,
       }
     })
 
