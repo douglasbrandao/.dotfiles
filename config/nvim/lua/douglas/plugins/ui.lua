@@ -30,6 +30,9 @@ return {
     })
 
     lualine.setup({
+      options = {
+        theme = 'catppuccin',
+      },
       sections = {
         lualine_x = {
           {
@@ -57,8 +60,6 @@ return {
         },
       }
     })
-
-    print(lualine.get_config())
 
     -- gitblame config
     vim.g.gitblame_message_when_not_committed = 'This line hasn\'t been committed yet'
