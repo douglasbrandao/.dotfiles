@@ -31,7 +31,8 @@ return {
 
     lualine.setup({
       options = {
-        theme = 'catppuccin',
+        -- theme = 'catppuccin',
+        theme = 'gruvbox',
       },
       sections = {
         lualine_x = {
