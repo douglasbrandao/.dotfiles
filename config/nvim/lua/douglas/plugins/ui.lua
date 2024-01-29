@@ -45,6 +45,11 @@ return {
             cond = noice.api.status.command.has,
             color = { fg = "#ff9e64" },
           },
+          {
+            noice.api.statusline.mode.get,
+            cond = require("noice").api.statusline.mode.has,
+            color = { fg = "#ff9e64" },
+          }
           -- {
           --   noice.api.status.mode.get,
           --   cond = noice.api.status.mode.has,
