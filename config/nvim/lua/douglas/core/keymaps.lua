@@ -1,6 +1,7 @@
 local utils = require('douglas.core.utils')
--- keymap("", "<Space>", "<Nop>", { silent = true })
--- vim.g.mapleader = " "
+
+utils.keymap("", "<Space>", "<Nop>", { silent = true })
+vim.g.mapleader = " "
 
 -- window navigation
 --keymap("n", "<C-O>b", "<C-W>s", { silent = true }) -- horizontal splitting
@@ -21,5 +22,3 @@ utils.keymap("n", "<C-Right>", ":vertical resize +2<CR>", { silent = true })
 -- swap lines
 utils.keymap("n", "<A-j>", ":m .+1<CR>", { silent = true })
 utils.keymap("n", "<A-k>", ":m .-2<CR>", { silent = true })
-
--- vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})

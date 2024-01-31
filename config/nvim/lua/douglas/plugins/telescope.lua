@@ -16,7 +16,8 @@ return {
     vim.keymap.set('n', '<C-P>', builtin.find_files, {})
     vim.keymap.set('n', '<C-F>', builtin.live_grep, {})
     vim.keymap.set('n', '<C-B>', builtin.buffers, {})
-    vim.keymap.set('n', '<C-S>', builtin.git_status, {})
+    vim.keymap.set('n', '<leader>gs', builtin.git_status, {})
+    vim.keymap.set('n', '<leader>ht', builtin.help_tags, {})
 
     -- harpoon
     utils.keymap("n", [[hm]], ":Telescope harpoon marks<CR>")

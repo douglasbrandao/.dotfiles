@@ -4,15 +4,23 @@ return {
     'folke/noice.nvim',
     'MunifTanjim/nui.nvim',
     'rcarriga/nvim-notify',
-    'f-person/git-blame.nvim',
   },
   config = function()
     local noice = require('noice')
     local notify = require('notify')
     local lualine = require('lualine')
-    local gitblame = require('gitblame')
 
-    noice.setup({})
+    noice.setup({
+      cmdline = {
+        enabled = true,
+      },
+      messages = {
+        enabled = true,
+      },
+      popupmenu = {
+        enabled = true,
+      }
+    })
 
     notify.setup({
       background_colour = "#000000",
@@ -47,9 +55,9 @@ return {
           },
           {
             noice.api.statusline.mode.get,
-            cond = require("noice").api.statusline.mode.has,
+            cond = noice.api.statusline.mode.has,
             color = { fg = "#ff9e64" },
-          }
+          },
           -- {
           --   noice.api.status.mode.get,
           --   cond = noice.api.status.mode.has,
@@ -61,15 +69,10 @@ return {
           --   color = { fg = "#ff9e64" },
           -- },
         },
-        lualine_c = {
-          { gitblame.get_current_blame_text, cond = gitblame.is_blame_text_available }
-        },
+        -- lualine_c = {
+        --   { gitblame.get_current_blame_text, cond = gitblame.is_blame_text_available }
+        -- },
       }
     })
-
-    -- gitblame config
-    vim.g.gitblame_message_when_not_committed = 'This line hasn\'t been committed yet'
-    vim.g.gitblame_message_template = '<author>, <date> • <summary>'
-    vim.g.gitblame_display_virtual_text = 0
   end
 }
