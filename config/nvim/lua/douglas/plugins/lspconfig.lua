@@ -17,7 +17,7 @@ return {
     mason.setup({})
 
     mason_lspconfig.setup({
-      ensure_installed = { "lua_ls", "tsserver", "pylsp", "vimls" },
+      ensure_installed = { "lua_ls", "tsserver", "pyright", "vimls" },
       automatic_installation = true,
     })
 
