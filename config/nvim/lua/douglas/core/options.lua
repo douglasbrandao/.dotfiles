@@ -15,9 +15,10 @@ v.title = true
 
 -- indent
 v.shiftwidth = 2
-v.shiftround = true
+-- v.shiftround = true
 v.expandtab = true
 v.tabstop = 2
+v.smartindent = true
 
 v.confirm = true
 -- v.spell = true

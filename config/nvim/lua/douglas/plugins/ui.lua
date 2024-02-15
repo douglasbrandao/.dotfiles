@@ -13,13 +13,26 @@ return {
     noice.setup({
       cmdline = {
         enabled = true,
+        view = "cmdline_popup",
       },
       messages = {
         enabled = true,
       },
       popupmenu = {
         enabled = true,
-      }
+      },
+      views = {
+        cmdline_popup = {
+          border = {
+            style = "none",
+            padding = { 1, 1 },
+          },
+          filter_options = {},
+          win_options = {
+            winhighlight = "NormalFloat:NormalFloat,FloatBorder:FloatBorder",
+          },
+        },
+      },
     })
 
     notify.setup({
