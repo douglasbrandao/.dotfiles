@@ -3,7 +3,6 @@ return {
   "ibhagwan/fzf-lua",
   config = function()
     require("fzf-lua").setup({})
-
     -- keymaps
     vim.keymap.set("n", "<C-P>", "<cmd>lua require('fzf-lua').files()<CR>", { silent = true })
     vim.keymap.set("n", "<C-F>", "<cmd>lua require('fzf-lua').live_grep()<CR>", { silent = true })
