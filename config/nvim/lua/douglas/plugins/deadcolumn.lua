@@ -1,6 +1,5 @@
 return {
   'Bekaboo/deadcolumn.nvim',
-  event = "InsertEnter",
   opts = {
     scope = 'line',
     modes = function(mode)
