@@ -13,21 +13,21 @@ return {
 
     -- Gruvbox colors
 
-    vim.api.nvim_set_hl(0, "NeovimDashboardLogo1", { fg = "#a89984" })
-    vim.api.nvim_set_hl(0, "NeovimDashboardLogo2", { fg = "#bdae93" })
-    vim.api.nvim_set_hl(0, "NeovimDashboardLogo3", { fg = "#d5c4a1" })
-    vim.api.nvim_set_hl(0, "NeovimDashboardLogo4", { fg = "#ebdbb2" })
-    vim.api.nvim_set_hl(0, "NeovimDashboardLogo5", { fg = "#fbf1c7" })
-    vim.api.nvim_set_hl(0, "NeovimDashboardLogo6", { fg = "#fe8019" })
+    -- vim.api.nvim_set_hl(0, "NeovimDashboardLogo1", { fg = "#a89984" })
+    -- vim.api.nvim_set_hl(0, "NeovimDashboardLogo2", { fg = "#bdae93" })
+    -- vim.api.nvim_set_hl(0, "NeovimDashboardLogo3", { fg = "#d5c4a1" })
+    -- vim.api.nvim_set_hl(0, "NeovimDashboardLogo4", { fg = "#ebdbb2" })
+    -- vim.api.nvim_set_hl(0, "NeovimDashboardLogo5", { fg = "#fbf1c7" })
+    -- vim.api.nvim_set_hl(0, "NeovimDashboardLogo6", { fg = "#fe8019" })
 
     -- Catppuccin colors
 
-    -- vim.api.nvim_set_hl(0, "NeovimDashboardLogo1", { fg = "#f5e0dc" })
-    -- vim.api.nvim_set_hl(0, "NeovimDashboardLogo2", { fg = "#f2cdcd" })
-    -- vim.api.nvim_set_hl(0, "NeovimDashboardLogo3", { fg = "#f5c2e7" })
-    -- vim.api.nvim_set_hl(0, "NeovimDashboardLogo4", { fg = "#cba6f7" })
-    -- vim.api.nvim_set_hl(0, "NeovimDashboardLogo5", { fg = "#f38ba8" })
-    -- vim.api.nvim_set_hl(0, "NeovimDashboardLogo6", { fg = "#eba0ac" })
+    vim.api.nvim_set_hl(0, "NeovimDashboardLogo1", { fg = "#f5e0dc" })
+    vim.api.nvim_set_hl(0, "NeovimDashboardLogo2", { fg = "#f2cdcd" })
+    vim.api.nvim_set_hl(0, "NeovimDashboardLogo3", { fg = "#f5c2e7" })
+    vim.api.nvim_set_hl(0, "NeovimDashboardLogo4", { fg = "#cba6f7" })
+    vim.api.nvim_set_hl(0, "NeovimDashboardLogo5", { fg = "#f38ba8" })
+    vim.api.nvim_set_hl(0, "NeovimDashboardLogo6", { fg = "#eba0ac" })
 
     dashboard.section.header.type = "group"
     dashboard.section.header.val = {
