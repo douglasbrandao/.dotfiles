@@ -19,3 +19,4 @@
   rh = reset --hard HEAD~1
   ps = push
   psup = push --set-upstream origin HEAD
+  lc = branch --sort=-committerdate
