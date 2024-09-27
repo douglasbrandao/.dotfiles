@@ -27,3 +27,4 @@ v.wrap = false
 
 v.termguicolors = true
 v.colorcolumn = "120"
+v.swapfile = false

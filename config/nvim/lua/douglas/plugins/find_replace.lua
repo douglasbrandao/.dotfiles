@@ -10,5 +10,11 @@ return {
     vim.keymap.set('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {
       desc = "Search on current file"
     })
+    vim.keymap.set('n', '<leader>rc', '<cmd>lua require("spectre.actions").run_current_replace()<CR>', {
+      desc = "Replace current item"
+    })
+    vim.keymap.set('n', '<leader>R', '<cmd>lua require("spectre.actions").run_replace()<CR>', {
+      desc = "Replace All"
+    })
   end
 }
