@@ -20,3 +20,4 @@
   ps = push
   psup = push --set-upstream origin HEAD
   lc = branch --sort=-committerdate
+  rb = "!f() { git branch -m \"$1\" && git push origin :$(git branch --show-current) && git push --set-upstream origin \"$1\"; }; f"
