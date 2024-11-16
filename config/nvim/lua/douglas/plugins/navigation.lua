@@ -53,8 +53,15 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
       require("oil").setup({
+        vim.keymap.set('n', '<Tab>', function()
+          vim.cmd((vim.bo.filetype == 'oil') and 'bd' or 'Oil')
+        end)
       })
-      utils.keymap("n", "-", "<CMD>Oil<CR>", { silent = true })
-    end
+    end,
+    -- config = function()
+    --   require("oil").setup({
+    --   })
+    --   utils.keymap("n", "-", "<CMD>Oil<CR>", { silent = true })
+    -- end
   }
 }
