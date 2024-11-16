@@ -58,10 +58,5 @@ return {
         end)
       })
     end,
-    -- config = function()
-    --   require("oil").setup({
-    --   })
-    --   utils.keymap("n", "-", "<CMD>Oil<CR>", { silent = true })
-    -- end
   }
 }
