@@ -1,5 +1,3 @@
-local utils = require('douglas.core.utils')
-
 return {
   {
     "nvim-tree/nvim-tree.lua",
