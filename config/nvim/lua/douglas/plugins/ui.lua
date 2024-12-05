@@ -54,7 +54,7 @@ return {
       options = {
         -- theme = 'catppuccin',
         -- theme = 'gruvbox',
-        theme = 'tokyonight',
+        theme = 'tokyonight-storm',
       },
       sections = {
         lualine_x = {
