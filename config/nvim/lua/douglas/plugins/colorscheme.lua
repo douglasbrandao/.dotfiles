@@ -3,6 +3,7 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
+    enabled = false,
     config = function()
       require("catppuccin").setup({
         flavour = "mocha", -- latte, frappe, macchiato, mocha
@@ -52,18 +53,25 @@ return {
           },
         },
       })
-
-      -- setup must be called before loading
-      vim.cmd.colorscheme "catppuccin"
+      vim.cmd([[colorscheme catppuccin]])
     end,
   },
-  -- {
-  --   "ellisonleao/gruvbox.nvim",
-  --   priority = 1000,
-  --   config = function()
-  --     vim.o.background = "dark"
-  --     vim.cmd([[colorscheme gruvbox]])
-  --   end,
-  --   opts = {},
-  -- }
+  {
+    "ellisonleao/gruvbox.nvim",
+    priority = 1000,
+    enabled = false,
+    config = function()
+      vim.o.background = "dark"
+      vim.cmd([[colorscheme gruvbox]])
+    end,
+    opts = {},
+  },
+  {
+    "folke/tokyonight.nvim",
+    priority = 1000,
+    enabled = true,
+    config = function()
+      vim.cmd([[colorscheme tokyonight-storm]])
+    end
+  }
 }

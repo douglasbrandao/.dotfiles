@@ -4,12 +4,12 @@ return {
     local alpha = require('alpha')
     local dashboard = require('alpha.themes.dashboard')
 
-    -- vim.api.nvim_set_hl(0, "NeovimDashboardLogo1", { fg = "#DA4939" })
-    -- vim.api.nvim_set_hl(0, "NeovimDashboardLogo2", { fg = "#FF875F" })
-    -- vim.api.nvim_set_hl(0, "NeovimDashboardLogo3", { fg = "#FFC66D" })
-    -- vim.api.nvim_set_hl(0, "NeovimDashboardLogo4", { fg = "#00FF03" })
-    -- vim.api.nvim_set_hl(0, "NeovimDashboardLogo5", { fg = "#00AFFF" })
-    -- vim.api.nvim_set_hl(0, "NeovimDashboardLogo6", { fg = "#8800FF" })
+    vim.api.nvim_set_hl(0, "NeovimDashboardLogo1", { fg = "#DA4939" })
+    vim.api.nvim_set_hl(0, "NeovimDashboardLogo2", { fg = "#FF875F" })
+    vim.api.nvim_set_hl(0, "NeovimDashboardLogo3", { fg = "#FFC66D" })
+    vim.api.nvim_set_hl(0, "NeovimDashboardLogo4", { fg = "#00FF03" })
+    vim.api.nvim_set_hl(0, "NeovimDashboardLogo5", { fg = "#00AFFF" })
+    vim.api.nvim_set_hl(0, "NeovimDashboardLogo6", { fg = "#8800FF" })
 
     -- Gruvbox colors
 
@@ -22,12 +22,12 @@ return {
 
     -- Catppuccin colors
 
-    vim.api.nvim_set_hl(0, "NeovimDashboardLogo1", { fg = "#f5e0dc" })
-    vim.api.nvim_set_hl(0, "NeovimDashboardLogo2", { fg = "#f2cdcd" })
-    vim.api.nvim_set_hl(0, "NeovimDashboardLogo3", { fg = "#f5c2e7" })
-    vim.api.nvim_set_hl(0, "NeovimDashboardLogo4", { fg = "#cba6f7" })
-    vim.api.nvim_set_hl(0, "NeovimDashboardLogo5", { fg = "#f38ba8" })
-    vim.api.nvim_set_hl(0, "NeovimDashboardLogo6", { fg = "#eba0ac" })
+    -- vim.api.nvim_set_hl(0, "NeovimDashboardLogo1", { fg = "#f5e0dc" })
+    -- vim.api.nvim_set_hl(0, "NeovimDashboardLogo2", { fg = "#f2cdcd" })
+    -- vim.api.nvim_set_hl(0, "NeovimDashboardLogo3", { fg = "#f5c2e7" })
+    -- vim.api.nvim_set_hl(0, "NeovimDashboardLogo4", { fg = "#cba6f7" })
+    -- vim.api.nvim_set_hl(0, "NeovimDashboardLogo5", { fg = "#f38ba8" })
+    -- vim.api.nvim_set_hl(0, "NeovimDashboardLogo6", { fg = "#eba0ac" })
 
     dashboard.section.header.type = "group"
     dashboard.section.header.val = {

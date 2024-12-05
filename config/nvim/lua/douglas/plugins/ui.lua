@@ -52,8 +52,9 @@ return {
 
     lualine.setup({
       options = {
-        theme = 'catppuccin',
+        -- theme = 'catppuccin',
         -- theme = 'gruvbox',
+        theme = 'tokyonight',
       },
       sections = {
         lualine_x = {
