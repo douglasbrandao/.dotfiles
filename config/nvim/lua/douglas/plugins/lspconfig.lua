@@ -19,7 +19,7 @@ return {
     mason_lspconfig.setup({
       ensure_installed = {
         "lua_ls",
-        "tsserver",
+        "ts_ls",
         "pyright",
         "vimls",
         "rust_analyzer"
@@ -42,7 +42,7 @@ return {
       }
     })
 
-    lspconfig.tsserver.setup({})
+    lspconfig.ts_ls.setup({})
     lspconfig.pylsp.setup({})
     lspconfig.vimls.setup({})
     lspconfig.rust_analyzer.setup({})
