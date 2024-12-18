@@ -14,7 +14,6 @@ return {
 		neodev.setup({})
 
 		local lspconfig = require("lspconfig")
-		local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 		mason.setup({})
 
@@ -28,6 +27,8 @@ return {
 			},
 			automatic_installation = true,
 		})
+
+		local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 		-- lspconfigs
 		lspconfig.lua_ls.setup({
