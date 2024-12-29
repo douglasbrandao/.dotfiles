@@ -51,6 +51,19 @@ return {
 		})
 		lspconfig.pylsp.setup({
 			capabilities = capabilities,
+			settings = {
+				pylsp = {
+					configurationSources = { "flake8" },
+					plugins = {
+						mccabe = { enabled = false },
+						pycodestyle = { enabled = false },
+						pyflakes = { enabled = false },
+						flake8 = {
+							enabled = true,
+						},
+					},
+				},
+			},
 		})
 		lspconfig.vimls.setup({
 			capabilities = capabilities,
