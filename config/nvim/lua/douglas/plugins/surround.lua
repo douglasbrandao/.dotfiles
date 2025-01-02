@@ -1,3 +1,7 @@
+--     The three "core" operations of add/delete/change can be done with the keymaps ys{motion}{char},
+--     ds{char}, and cs{target}{replacement}, respectively.
+--     For the following examples, * will denote the cursor position
+--
 --     Old text                    Command         New text
 -- --------------------------------------------------------------------------------
 --     surr*ound_words             ysiw)           (surround_words)
@@ -9,11 +13,10 @@
 --     delete(functi*on calls)     dsf             function calls
 
 return {
-  "kylechui/nvim-surround",
-  version = "*",
-  event = "VeryLazy",
-  config = function()
-    require("nvim-surround").setup({
-    })
-  end
+	"kylechui/nvim-surround",
+	version = "*",
+	event = "VeryLazy",
+	config = function()
+		require("nvim-surround").setup({})
+	end,
 }
