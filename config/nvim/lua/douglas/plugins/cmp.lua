@@ -1,7 +1,7 @@
 return {
 	{
 		"hrsh7th/nvim-cmp",
-		enabled = false,
+		enabled = true,
 		dependencies = {
 			"hrsh7th/cmp-path",
 			"hrsh7th/cmp-buffer",
@@ -77,6 +77,7 @@ return {
 	{
 		"saghen/blink.cmp",
 		dependencies = "rafamadriz/friendly-snippets",
+		enabled = false,
 		version = "v0.*",
 		opts = {
 			-- 'default' for mappings similar to built-in completion

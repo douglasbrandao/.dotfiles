@@ -28,11 +28,11 @@ return {
 			automatic_installation = true,
 		})
 
-		local capabilities = require("blink.cmp").get_lsp_capabilities()
+		-- local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 		-- lspconfigs
 		lspconfig.lua_ls.setup({
-			capabilities = capabilities,
+			-- capabilities = capabilities,
 			settings = {
 				Lua = {
 					diagnostics = {
@@ -47,10 +47,10 @@ return {
 		})
 
 		lspconfig.ts_ls.setup({
-			capabilities = capabilities,
+			-- capabilities = capabilities,
 		})
 		lspconfig.pylsp.setup({
-			capabilities = capabilities,
+			-- capabilities = capabilities,
 			settings = {
 				pylsp = {
 					configurationSources = { "flake8" },
@@ -66,10 +66,10 @@ return {
 			},
 		})
 		lspconfig.vimls.setup({
-			capabilities = capabilities,
+			-- capabilities = capabilities,
 		})
 		lspconfig.rust_analyzer.setup({
-			capabilities = capabilities,
+			-- capabilities = capabilities,
 		})
 
 		vim.api.nvim_create_autocmd("LspAttach", {
