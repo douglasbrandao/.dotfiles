@@ -3,15 +3,11 @@ return {
 	dependencies = {
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
-		"folke/neodev.nvim",
 		"saghen/blink.cmp",
 	},
 	config = function()
 		local mason = require("mason")
 		local mason_lspconfig = require("mason-lspconfig")
-		local neodev = require("neodev")
-
-		neodev.setup({})
 
 		local lspconfig = require("lspconfig")
 
