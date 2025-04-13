@@ -50,3 +50,6 @@ if [ -f '/home/douglas/stone/update-leads-inbound-rand/google-cloud-sdk/completi
 alias queries="cd /home/douglas/stone/automated-relationship-dialogflow-bigquery-analytics"
 alias bot="cd /home/douglas/stone/automated-relationship-dialogflow-agents-manager"
 alias webhooks="cd /home/douglas/stone/automated-relationship-agents-webhooks"
+
+# Add nvim do PATH
+export PATH="$PATH:/opt/nvim-linux64/bin"
