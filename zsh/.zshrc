@@ -52,4 +52,4 @@ alias bot="cd /home/douglas/stone/automated-relationship-dialogflow-agents-manag
 alias webhooks="cd /home/douglas/stone/automated-relationship-agents-webhooks"
 
 # Add nvim do PATH
-export PATH="$PATH:/opt/nvim-linux64/bin2"
+export PATH="$PATH:/opt/nvim-linux64/bin"
