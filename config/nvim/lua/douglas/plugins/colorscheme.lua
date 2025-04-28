@@ -71,7 +71,7 @@ return {
 		priority = 1000,
 		enabled = true,
 		config = function()
-			vim.cmd([[colorscheme tokyonight-storm]])
+			vim.cmd([[colorscheme tokyonight-night]])
 		end,
 	},
 }
