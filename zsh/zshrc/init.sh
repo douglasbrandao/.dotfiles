@@ -1,0 +1,5 @@
+export ZSH="$HOME/.oh-my-zsh"
+export PATH="$PATH:/opt/nvim-linux64/bin"
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+export PATH="$PATH:/usr/local/go/bin"
+. "$HOME/.local/bin/env"
