@@ -1,9 +1,8 @@
 return {
-	"williamboman/mason.nvim",
+	"mason-org/mason.nvim",
 	dependencies = {
-		"williamboman/mason-lspconfig.nvim",
+		"mason-org/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
-		"saghen/blink.cmp",
 	},
 	config = function()
 		local mason = require("mason")
@@ -21,7 +20,6 @@ return {
 				"vimls",
 				"rust_analyzer",
 			},
-			automatic_installation = true,
 		})
 
 		-- local capabilities = require("blink.cmp").get_lsp_capabilities()

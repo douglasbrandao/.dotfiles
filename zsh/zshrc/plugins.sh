@@ -34,3 +34,5 @@ zinit light zsh-users/zsh-completions
 
 # Enable starship
 eval "$(starship init zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
