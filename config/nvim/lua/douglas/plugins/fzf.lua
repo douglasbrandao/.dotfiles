@@ -1,6 +1,7 @@
 -- https://github.com/ibhagwan/fzf-lua
 return {
   "ibhagwan/fzf-lua",
+  event = "VeryLazy",
   config = function()
     require("fzf-lua").setup({})
     -- keymaps

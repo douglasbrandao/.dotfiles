@@ -19,5 +19,5 @@ require("lazy").setup({
 	spec = {
 		{ import = "douglas.plugins" },
 	},
-	checker = { enabled = true, notify = false },
+	checker = { enabled = false },
 })

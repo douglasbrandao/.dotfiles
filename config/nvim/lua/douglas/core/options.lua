@@ -28,3 +28,5 @@ v.wrap = false
 v.termguicolors = true
 v.colorcolumn = "120"
 v.swapfile = false
+v.updatetime = 200
+v.timeoutlen = 300
