@@ -19,7 +19,6 @@ return {
         },
         current_line_blame_formatter = '<author>, <author_time:%d/%m/%Y> - <summary>',
       }
-
       -- mapping
       vim.keymap.set('n', '<leader>hs', ':Gitsigns stage_hunk<CR>', {})
       vim.keymap.set('n', '<leader>hr', ':Gitsigns reset_hunk<CR>', {})
