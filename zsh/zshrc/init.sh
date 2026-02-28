@@ -1,5 +1,4 @@
-export ZSH="$HOME/.oh-my-zsh"
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)" 2>/dev/null
+
 export PATH="$PATH:/usr/local/go/bin"
-. "$HOME/.local/bin/env"

@@ -9,8 +9,6 @@ plugins=(
     gitignore # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/gitignore
 )
 
-source $ZSH/oh-my-zsh.sh
-
 ### Added by Zinit's installer
 
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then

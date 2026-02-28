@@ -1,7 +1,6 @@
 [user]
-	email = douglasfrb@gmail.com
-	name = Douglas Brandão
-
+        name = Douglas Frota Brandao
+        email = douglasfrb@gmail.com
 [core]
   editor = vim
 

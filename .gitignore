@@ -1,3 +1,10 @@
 /nvim/lua/plugin/
 
 neovim.deb
+
+# macOS
+.DS_Store
+
+# Neovim cache
+config/nvim/.netrwhist
+
