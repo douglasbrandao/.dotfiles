@@ -21,58 +21,140 @@ error()   { echo -e "${RED}[ERROR]${NC} $1"; exit 1; }
 # ============================================================
 # Checks
 # ============================================================
-[[ "$(uname)" != "Darwin" ]] && error "Este script é apenas para macOS."
 [[ ! -d "$DOTFILES" ]] && error "Pasta $DOTFILES não encontrada. Clone o repositório primeiro."
 
-# ============================================================
-# Homebrew
-# ============================================================
-info "Verificando Homebrew..."
-if ! command -v brew &>/dev/null; then
-  info "Instalando Homebrew..."
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-  success "Homebrew instalado."
-else
-  success "Homebrew já instalado."
+OS_TYPE=""
+
+if [[ "$(uname)" == "Darwin" ]]; then
+  OS_TYPE="macos"
+elif [[ "$(uname)" == "Linux" ]]; then
+  if [[ -f /etc/os-release ]]; then
+    . /etc/os-release
+    if [[ "$ID" == "ubuntu" ]]; then
+      OS_TYPE="ubuntu"
+    fi
+  fi
 fi
 
-brew update --quiet
+[[ -z "$OS_TYPE" ]] && error "Sistema não suportado. Use macOS ou Ubuntu."
+
+info "Sistema detectado: $OS_TYPE"
+
+install_brew() {
+  info "Verificando Homebrew..."
+  if ! command -v brew &>/dev/null; then
+    info "Instalando Homebrew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+    if [[ -x /opt/homebrew/bin/brew ]]; then
+      eval "$(/opt/homebrew/bin/brew shellenv)"
+    elif [[ -x /usr/local/bin/brew ]]; then
+      eval "$(/usr/local/bin/brew shellenv)"
+    fi
+
+    success "Homebrew instalado."
+  else
+    success "Homebrew já instalado."
+  fi
+
+  brew update --quiet
+}
+
+install_cli_macos() {
+  info "Instalando pacotes CLI (macOS)..."
+  brew install \
+    bash \
+    bc \
+    coreutils \
+    gawk \
+    gh \
+    glab \
+    gnu-sed \
+    jq \
+    git \
+    neovim \
+    tmux \
+    fzf \
+    ripgrep \
+    fd \
+    starship \
+    zsh
+
+  success "Pacotes CLI instalados."
+}
+
+install_fonts_apps_macos() {
+  info "Instalando fontes e apps (macOS)..."
+  brew install --cask \
+    font-fira-code-nerd-font \
+    font-noto-sans-symbols-2 \
+    ghostty
+
+  success "Fontes e apps instalados."
+}
+
+install_cli_ubuntu() {
+  info "Atualizando índices APT..."
+  sudo apt update -y
+
+  info "Instalando pacotes CLI (Ubuntu)..."
+  sudo apt install -y \
+    bash \
+    bc \
+    coreutils \
+    gawk \
+    jq \
+    git \
+    neovim \
+    tmux \
+    fzf \
+    ripgrep \
+    fd-find \
+    zsh \
+    curl
+
+  if ! command -v gh &>/dev/null; then
+    warn "GitHub CLI (gh) não encontrado. Instale manualmente se precisar: https://cli.github.com/"
+  fi
+
+  if ! command -v glab &>/dev/null; then
+    warn "GitLab CLI (glab) não encontrado. Instale manualmente se precisar: https://gitlab.com/gitlab-org/cli"
+  fi
+
+  if ! command -v starship &>/dev/null; then
+    info "Instalando Starship..."
+    curl -sS https://starship.rs/install.sh | sh -s -- -y
+  fi
+
+  mkdir -p "$HOME/.local/bin"
+  if command -v fdfind &>/dev/null && [[ ! -e "$HOME/.local/bin/fd" ]]; then
+    ln -s "$(command -v fdfind)" "$HOME/.local/bin/fd"
+    success "Alias de fd criado em ~/.local/bin/fd"
+  fi
+
+  success "Pacotes CLI instalados."
+}
+
+install_fonts_apps_ubuntu() {
+  info "Instalando fontes (Ubuntu)..."
+  sudo apt install -y \
+    fonts-firacode \
+    fonts-noto-color-emoji || warn "Falha ao instalar uma ou mais fontes via APT."
+
+  warn "Ghostty não é instalado automaticamente no Ubuntu por este script."
+}
 
 # ============================================================
-# CLI packages
+# Packages by OS
 # ============================================================
-info "Instalando pacotes CLI..."
-brew install \
-  bash \
-  bc \
-  coreutils \
-  gawk \
-  gh \
-  glab \
-  gnu-sed \
-  jq \
-  git \
-  neovim \
-  tmux \
-  fzf \
-  ripgrep \
-  fd \
-  starship \
-  zsh
-
-success "Pacotes CLI instalados."
-
-# ============================================================
-# Fonts & Apps
-# ============================================================
-info "Instalando fontes e apps..."
-brew install --cask \
-  font-fira-code-nerd-font \
-  font-noto-sans-symbols-2 \
-  ghostty
-
-success "Fontes e apps instalados."
+if [[ "$OS_TYPE" == "macos" ]]; then
+  install_brew
+  install_cli_macos
+  install_fonts_apps_macos
+else
+  install_cli_ubuntu
+  install_fonts_apps_ubuntu
+fi
 
 # ============================================================
 # NVM
@@ -149,7 +231,11 @@ create_symlink "$DOTFILES/config/ghostty"          "$HOME/.config/ghostty"
 # Neovim plugins
 # ============================================================
 info "Instalando plugins do Neovim (lazy.nvim)..."
-nvim --headless "+Lazy! sync" +qa 2>/dev/null && success "Plugins do Neovim instalados." || warn "Instale os plugins manualmente abrindo o Neovim."
+if command -v nvim &>/dev/null; then
+  nvim --headless "+Lazy! sync" +qa 2>/dev/null && success "Plugins do Neovim instalados." || warn "Instale os plugins manualmente abrindo o Neovim."
+else
+  warn "Neovim não encontrado; pulando instalação de plugins."
+fi
 
 # ============================================================
 # Tmux plugins
